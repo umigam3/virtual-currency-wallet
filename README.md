@@ -1,54 +1,31 @@
-# React + TypeScript + Vite
+# Conversor de Divisas Virtual
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[https://virtual-currency-wallet.netlify.app/](https://virtual-currency-wallet.netlify.app/)
 
-Currently, two official plugins are available:
+Aplicación web simple que permite convertir una cantidad en **euros (EUR)** a su equivalente en otras monedas utilizando diferentes **exchanges**. Puedes seleccionar hasta **tres monedas destino** y ver el valor actual en tiempo real.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Los datos de cotización se obtienen a través de la **API pública de Coinbase**.
 
-## Expanding the ESLint configuration
+## Características
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Conversión desde EUR a múltiples monedas.
+- Selección de hasta 3 monedas destino por consulta.
+- Interfaz rápida, sencilla y responsiva.
+- Datos obtenidos desde APIs de exchange (por implementar o ya integradas).
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tecnologías
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React
+- HTML / CSS / TypeScript
+- Tailwind CSS
+- Despliegue en Netlify
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Uso
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. Ingresa una cantidad en euros.
+2. Selecciona hasta tres monedas a las que quieres convertir.
+3. Visualiza el valor equivalente en cada moneda seleccionada.
+
+## Enlace
+
+👉 [Accede a la app aquí](https://virtual-currency-wallet.netlify.app/)
