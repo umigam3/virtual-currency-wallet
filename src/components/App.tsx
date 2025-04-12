@@ -100,6 +100,7 @@ function App() {
                       type="button"
                       onClick={() => removeCurrency(i)}
                       className="cursor-pointer"
+                      disabled={disabled}
                     >
                       <Trash />
                     </button>
@@ -115,6 +116,7 @@ function App() {
                 type="button"
                 onClick={addCurrency}
                 className="flex text-sm items-center gap-2 py-2 cursor-pointer -mt-2"
+                disabled={disabled}
               >
                 <CirclePlus />
                 <span>Add exchange currency</span>
@@ -133,12 +135,12 @@ function App() {
           </div>
         </form>
 
-        {error ||
-          (errorRates && (
-            <div className="text-red-600 bg-red-100 border border-red-300 rounded-xl px-4 py-2 mb-4 text-center">
-              {error}
-            </div>
-          ))}
+        {(error || errorRates) && (
+          <div className="text-red-600 bg-red-100 border border-red-300 rounded-xl px-4 py-2 mb-4 text-center space-y-1">
+            {error && <div>{error}</div>}
+            {errorRates && <div>{errorRates}</div>}
+          </div>
+        )}
 
         {results.length > 0 && (
           <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 m-6 shadow-md text-white">
