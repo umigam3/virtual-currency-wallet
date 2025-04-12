@@ -20,12 +20,12 @@ const CurrencySelect: React.FC<CurrencySelectProps> = ({
 }) => {
   return (
     <div>
-      <label>To</label>
       <select
         className="w-full py-2 px-2 border border-gray-300 bg-black rounded"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
+        required
       >
         <option value="">Select currency</option>
         {currencies.map((currency) => (

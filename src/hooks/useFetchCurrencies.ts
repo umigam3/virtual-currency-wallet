@@ -11,7 +11,7 @@ const useFetchCurrencies = () => {
         const data = await res.json();
         setCurrencies(data.data);
       } catch (err) {
-        setError("No se pudieron cargar las divisas.");
+        setError("No se pudieron cargar las divisas correctamente.");
       }
     };
 
