@@ -39,6 +39,12 @@ function App() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const parsedAmount = parseFloat(amount.replace(",", "."));
+
+    if (isNaN(parsedAmount) || parsedAmount <= 0) {
+      setResults([]);
+      return;
+    }
     const selectedRates = selectedCurrencies
       .filter((cur) => cur !== "")
       .map((cur) => {

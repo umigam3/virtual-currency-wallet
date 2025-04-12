@@ -6,7 +6,7 @@ function Header() {
       <nav className="mb-10 bg-gray-900 border-b border-gray-700">
         <div className="flex items-center justify-between max-w-5xl mx-auto h-16 px-6">
           <span
-            className="text-xl md:text-2xl font-semibold uppercase tracking-wider
+            className="text-lg md:text-2xl font-semibold uppercase tracking-wider
 "
           >
             Virtual Currency Wallet
